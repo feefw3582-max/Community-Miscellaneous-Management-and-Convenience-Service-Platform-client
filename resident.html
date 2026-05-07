@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>畅楼生活 | 业主客户端</title>
+    <meta name="theme-color" content="#FF8A3D" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="畅楼生活" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" href="./assets/app-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/app-icon.svg" />
+    <link rel="stylesheet" href="./tokens/resident-app.tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="resident-app-body">
+    <div class="resident-shell">
+      <header class="resident-app-header">
+        <div class="resident-topbar">
+          <div class="resident-app-title">
+            <p class="eyebrow">畅楼生活</p>
+            <h1>先把这件事处理好</h1>
+            <p class="resident-title-note" id="resident-title-note">先看推荐方案，再按最省心的方式继续。</p>
+          </div>
+          <div class="resident-topbar-actions">
+            <a class="secondary-link" href="./index.html">中台</a>
+            <button class="ghost-button" id="resident-reset" type="button">重置</button>
+          </div>
+        </div>
+        <div class="resident-header-row">
+          <select class="resident-selector" id="resident-switcher" aria-label="选择住户"></select>
+        </div>
+      </header>
+
+      <main class="resident-main">
+        <section class="resident-page is-active" data-tab-panel="home">
+          <div class="resident-home-flow" id="resident-home-flow">
+            <section class="status-card status-card-app status-card-home resident-home-node" id="status-card"></section>
+            <section class="resident-home-node resident-home-node-reason task-focus-card reason-explain-card" id="resident-current-event"></section>
+            <section class="resident-home-node resident-home-node-recommended" id="resident-recommended-option"></section>
+            <section class="resident-home-node resident-home-options-grid" id="resident-options"></section>
+            <section class="resident-home-node resident-home-node-decision" id="resident-home-decisions"></section>
+            <div class="resident-home-tail" id="home-progress-section">
+              <section class="resident-home-tail-card" id="resident-progress"></section>
+              <section class="resident-home-tail-card" id="resident-home-reward"></section>
+            </div>
+          </div>
+        </section>
+
+        <section class="resident-page" data-tab-panel="volunteer">
+          <section class="resident-section resident-page-hero" id="resident-volunteer-hero"></section>
+
+          <section class="resident-section">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">任务大厅</p>
+                <h2>低门槛、短时长、做完会被看见</h2>
+              </div>
+            </div>
+            <div class="segmented-control" id="resident-volunteer-filters"></div>
+            <div class="task-grid resident-task-hall" id="resident-volunteer-tasks"></div>
+          </section>
+
+          <section class="resident-section">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">成果墙</p>
+                <h2>最近这栋楼又多了哪些正向成果</h2>
+              </div>
+              <button class="inline-link" data-scroll-target="building-results" type="button">看全部</button>
+            </div>
+            <div class="result-card-list" id="building-results"></div>
+          </section>
+        </section>
+
+        <section class="resident-page" data-tab-panel="messages">
+          <section class="resident-section resident-page-hero">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">消息中心</p>
+                <h2>提醒、到账和邻里动态都放在这里</h2>
+              </div>
+              <button class="inline-link" id="mark-all-read" type="button">全部已读</button>
+            </div>
+            <div class="segmented-control" id="resident-message-filters"></div>
+          </section>
+
+          <section class="resident-section">
+            <div class="message-list message-list-app" id="resident-messages"></div>
+          </section>
+        </section>
+
+        <section class="resident-page" data-tab-panel="family">
+          <section class="resident-section resident-page-hero">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">家人代办</p>
+                <h2>谁能帮你一起处理，这里说清楚</h2>
+              </div>
+              <button class="inline-link" data-switch-tab="home" type="button">回到首页</button>
+            </div>
+            <div id="family-panel"></div>
+          </section>
+        </section>
+
+        <section class="resident-page" data-tab-panel="mine">
+          <section class="resident-section resident-page-hero">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">我的资产</p>
+                <h2>到账、权益、徽章和等级都在这里</h2>
+              </div>
+            </div>
+            <div class="points-dashboard" id="resident-points"></div>
+          </section>
+
+          <section class="resident-section">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">可用权益与券包</p>
+                <h2>哪些能领，哪些已到账，哪些已经用过</h2>
+              </div>
+              <button class="inline-link" data-switch-tab="volunteer" type="button">继续参与</button>
+            </div>
+            <div class="wallet-list" id="resident-wallet"></div>
+          </section>
+
+          <section class="resident-section">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">最近记录</p>
+                <h2>你最近推动了什么变化</h2>
+              </div>
+            </div>
+            <div class="timeline-list" id="resident-history"></div>
+          </section>
+
+          <section class="resident-section">
+            <div class="resident-section-heading compact">
+              <div>
+                <p class="kicker">治理帮助</p>
+                <h2>常见问题和轻提醒</h2>
+              </div>
+            </div>
+            <div class="help-list" id="resident-help"></div>
+          </section>
+        </section>
+      </main>
+
+      <button class="resident-fab" id="resident-fab" type="button" hidden></button>
+
+      <div class="resident-overlay" id="drawer-backdrop" hidden></div>
+      <section class="resident-drawer" id="action-drawer" aria-hidden="true">
+        <div class="drawer-handle"></div>
+        <div class="drawer-content" id="drawer-content"></div>
+      </section>
+
+      <div class="resident-toast" id="resident-toast" hidden></div>
+    </div>
+
+    <nav class="resident-bottom-nav" aria-label="客户端底部导航">
+      <button class="resident-nav-item is-active" data-tab="home" type="button">
+        <span class="resident-nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5 12 3l9 7.5"></path>
+            <path d="M5.5 10v10h13V10"></path>
+          </svg>
+        </span>
+        <span>首页</span>
+      </button>
+      <button class="resident-nav-item" data-tab="volunteer" type="button">
+        <span class="resident-nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21c-4.7-2.9-7-6.1-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5c0 3.4-2.3 6.6-7 9.5Z"></path>
+            <path d="M9.5 12h5"></path>
+            <path d="M12 9.5v5"></path>
+          </svg>
+        </span>
+        <span>志愿</span>
+      </button>
+      <button class="resident-nav-item" data-tab="messages" type="button">
+        <span class="resident-nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7Z"></path>
+          </svg>
+        </span>
+        <span>消息</span>
+      </button>
+      <button class="resident-nav-item" data-tab="family" type="button">
+        <span class="resident-nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16.5 20v-1.4A3.6 3.6 0 0 0 12.9 15h-1.8a3.6 3.6 0 0 0-3.6 3.6V20"></path>
+            <circle cx="12" cy="8" r="3.2"></circle>
+            <path d="M19.5 20v-1a2.9 2.9 0 0 0-2.3-2.8"></path>
+            <path d="M17.2 5.6a3 3 0 0 1 0 4.8"></path>
+          </svg>
+        </span>
+        <span>家人</span>
+      </button>
+      <button class="resident-nav-item" data-tab="mine" type="button">
+        <span class="resident-nav-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="3.2"></circle>
+            <path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path>
+          </svg>
+        </span>
+        <span>我的</span>
+      </button>
+    </nav>
+
+    <script src="./shared-state.js"></script>
+    <script src="./resident.js"></script>
+  </body>
+</html>

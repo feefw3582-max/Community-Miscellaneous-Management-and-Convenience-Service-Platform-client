@@ -1,0 +1,640 @@
+{
+  "meta": {
+    "communityName": "海棠苑",
+    "sprintLabel": "楼道共治演示周",
+    "updatedAt": "今天 18:20"
+  },
+  "incidents": [
+    {
+      "id": "EVT-1024",
+      "residentId": "R-01",
+      "residentName": "李阿姨",
+      "title": "旧鞋柜与纸箱占用消防通道",
+      "building": "3号楼 2单元 5层",
+      "room": "502",
+      "severity": "red",
+      "status": "pending",
+      "currentStage": "等待住户确认处理路径",
+      "deadlineText": "24 小时内需完成首轮推进",
+      "summary": "旧鞋柜长期占道，纸箱堆放在弱电井旁，已影响通行宽度与消防安全。",
+      "source": "巡查发现",
+      "recommendation": "先提供 48 小时周转位，再安排助老协助与低价清运，避免直接冲突。",
+      "rewardSuggestion": "完成闭环后发放 30 住户积分与食用油兑换券",
+      "serviceNeeds": ["48 小时周转位", "助老协助", "上门清运"],
+      "selectedPath": "",
+      "consoleActions": [
+        { "id": "send_reminder", "label": "发送温和提醒" },
+        { "id": "assign_storage", "label": "分配周转位" },
+        { "id": "create_assist", "label": "创建协助工单" }
+      ],
+      "timeline": [
+        "09:10 巡查员上传照片并标记红色风险",
+        "09:24 系统识别为高龄住户场景，生成温和提醒草案",
+        "09:35 等待住户或家属选择处理路径"
+      ]
+    },
+    {
+      "id": "EVT-1025",
+      "residentId": "R-02",
+      "residentName": "王先生",
+      "title": "婴儿车与折叠桌临时堆放",
+      "building": "7号楼 1单元 3层",
+      "room": "301",
+      "severity": "yellow",
+      "status": "in_progress",
+      "currentStage": "已预约回收，等待服务商上门",
+      "deadlineText": "明天 10:00 上门回收",
+      "summary": "住户已选择上门回收，当前重点是履约提醒与进度可见。",
+      "source": "住户自报",
+      "recommendation": "保持低打扰提醒，确保回收服务商准时到场，减少重复沟通。",
+      "rewardSuggestion": "完成闭环后发放 20 住户积分",
+      "serviceNeeds": ["预约回收", "进度可见"],
+      "selectedPath": "recycle",
+      "consoleActions": [
+        { "id": "send_reminder", "label": "发送履约提醒" },
+        { "id": "create_assist", "label": "创建协助工单" }
+      ],
+      "timeline": [
+        "昨天 18:30 住户主动报备临时堆放",
+        "昨天 18:36 系统推荐预约回收",
+        "昨天 18:42 住户确认上门时间"
+      ]
+    },
+    {
+      "id": "EVT-1026",
+      "residentId": "R-03",
+      "residentName": "陈女士",
+      "title": "装修余料短时堆放",
+      "building": "2号楼 3单元 6层",
+      "room": "601",
+      "severity": "blue",
+      "status": "completed",
+      "currentStage": "已闭环，等待成果沉淀",
+      "deadlineText": "已完成回访销项",
+      "summary": "物业已协助集中清运，住户确认无异议，可作为正向案例沉淀。",
+      "source": "邻里上报",
+      "recommendation": "将其沉淀为低冲突治理案例，用于楼栋成果展示与认知运营。",
+      "rewardSuggestion": "已核销 1 张清运优惠券",
+      "serviceNeeds": ["快速清运", "回访销项"],
+      "selectedPath": "cleanup",
+      "consoleActions": [{ "id": "send_reminder", "label": "发送感谢回访" }],
+      "timeline": [
+        "前天 11:20 邻居拍照上报",
+        "前天 13:00 管家电话确认处理方式",
+        "昨天 09:00 上门清运完成",
+        "昨天 16:00 住户确认闭环"
+      ]
+    },
+    {
+      "id": "EVT-1027",
+      "residentId": "R-04",
+      "residentName": "周阿姨",
+      "title": "旧婴儿车放在楼道拐角",
+      "building": "6号楼 1单元 4层",
+      "room": "402",
+      "severity": "yellow",
+      "status": "pending",
+      "currentStage": "等待家属代办确认",
+      "deadlineText": "48 小时内完成首次沟通",
+      "summary": "物品体量不大但长期占位，住户本人不熟悉线上操作，需要适老代办。",
+      "source": "物业巡查",
+      "recommendation": "优先联系家属代办，再判断是否需要周转位或协助清运。",
+      "rewardSuggestion": "完成后发放鸡蛋兑换券",
+      "serviceNeeds": ["家属代办", "温和提醒"],
+      "selectedPath": "",
+      "consoleActions": [
+        { "id": "send_reminder", "label": "同步家属提醒" },
+        { "id": "create_assist", "label": "创建适老协助工单" }
+      ],
+      "timeline": [
+        "今天 08:20 巡查发现旧婴儿车长期占位",
+        "今天 08:40 系统识别为适老场景并匹配家属代办关系"
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "id": "R-01",
+      "name": "李阿姨",
+      "room": "3号楼 2单元 502",
+      "identity": "高龄住户",
+      "profile": "68 岁，退休居民，与老伴同住。",
+      "tags": ["高龄住户", "高复发关注", "可家属代办"],
+      "challenge": "舍不得扔、不熟悉线上操作，还需要搬运协助。",
+      "recommendedStrategy": [
+        "先提供家属代办入口，减少老人自己操作压力",
+        "提醒文案避免指责，先给解决路径再谈治理要求",
+        "优先安排周转位和助老协助，降低第一步门槛"
+      ],
+      "family": {
+        "agent": "女儿 李婷",
+        "status": "可代预约、可代确认完成",
+        "note": "系统会同步提醒给家属，由家属帮助选择路径和确认进度。",
+        "actions": ["可代选处理路径", "可代确认上门时段", "可代确认完成结果"]
+      },
+      "wallet": [
+        {
+          "id": "ledger-R01-001",
+          "title": "住户积分 +50",
+          "type": "已到账",
+          "note": "上月完成楼道纸箱整理",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 50,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R01-002",
+          "title": "住户积分 +30",
+          "type": "已到账",
+          "note": "家属代办完成上次楼道清理",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 30,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R01-003",
+          "title": "贡献积分 +15",
+          "type": "已到账",
+          "note": "帮助邻里确认过一次代办流程",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 15,
+          "createdAt": "上周"
+        },
+        {
+          "id": "ledger-R01-004",
+          "title": "楼道共治参与者",
+          "type": "已解锁",
+          "note": "完成过一次完整的楼道治理闭环",
+          "status": "unlocked",
+          "account": "achievement",
+          "assetType": "badge",
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R01-005",
+          "title": "助老协作新手",
+          "type": "已解锁",
+          "note": "第一次参与助老协作后解锁",
+          "status": "unlocked",
+          "account": "achievement",
+          "assetType": "badge",
+          "createdAt": "上周"
+        }
+      ],
+      "points": {
+        "resident": 80,
+        "volunteer": 15,
+        "badges": ["楼道共治参与者", "助老协作新手"]
+      },
+      "grantCodes": [],
+      "rewardSummary": "先选处理方式，再锁定本次奖励",
+      "history": ["上月曾出现纸箱临时堆放，后由家属代办完成处理"],
+      "selectedOption": "",
+      "latestUnlock": null
+    },
+    {
+      "id": "R-02",
+      "name": "王先生",
+      "room": "7号楼 1单元 301",
+      "identity": "双职工家庭",
+      "profile": "34 岁，双职工家庭，更重视效率与准时履约。",
+      "tags": ["时间敏感", "可自助办理"],
+      "challenge": "白天不在家，希望一次预约就能闭环，不想重复沟通。",
+      "recommendedStrategy": [
+        "突出时间选择与到场提醒",
+        "让进度时间线更透明，降低不确定感",
+        "完成后自动发放电子奖励，减少额外动作"
+      ],
+      "family": {
+        "agent": "无需代办",
+        "status": "本人可独立处理",
+        "note": "这类住户更看重效率、准时履约和一次处理完成。",
+        "actions": ["短信提醒", "到场前 2 小时提醒", "完成后自动销项"]
+      },
+      "wallet": [
+        {
+          "id": "ledger-R02-001",
+          "title": "住户积分 +35",
+          "type": "已到账",
+          "note": "上次按时完成楼道整理",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 35,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R02-002",
+          "title": "住户积分 +30",
+          "type": "已到账",
+          "note": "参与楼栋共治活动",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 30,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R02-003",
+          "title": "贡献积分 +40",
+          "type": "已到账",
+          "note": "做过两次轻任务协助",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 40,
+          "createdAt": "上周"
+        },
+        {
+          "id": "ledger-R02-004",
+          "title": "本次回收闭环积分 +20",
+          "type": "待到账",
+          "note": "本次回收履约完成后自动到账",
+          "status": "pending",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 20,
+          "createdAt": "昨天"
+        },
+        {
+          "id": "ledger-R02-005",
+          "title": "回收优先券",
+          "type": "待到账",
+          "note": "本次事件闭环后可领取",
+          "status": "pending",
+          "account": "benefit",
+          "assetType": "coupon",
+          "createdAt": "昨天"
+        },
+        {
+          "id": "ledger-R02-006",
+          "title": "轻任务参与者",
+          "type": "已解锁",
+          "note": "已连续参与多次轻任务",
+          "status": "unlocked",
+          "account": "achievement",
+          "assetType": "badge",
+          "createdAt": "上周"
+        }
+      ],
+      "points": {
+        "resident": 65,
+        "volunteer": 40,
+        "badges": ["轻任务参与者"]
+      },
+      "grantCodes": [],
+      "rewardSummary": "本次闭环奖励已锁定，等待回收完成后到账",
+      "history": ["本季度首次出现楼道临时堆放问题"],
+      "selectedOption": "recycle",
+      "latestUnlock": null
+    },
+    {
+      "id": "R-03",
+      "name": "陈女士",
+      "room": "2号楼 3单元 601",
+      "identity": "装修过渡住户",
+      "profile": "41 岁，装修过渡场景，配合度高，愿意参与共治。",
+      "tags": ["一次性问题", "配合度高", "可参与志愿"],
+      "challenge": "需要快速清运，但不想被反复打扰。",
+      "recommendedStrategy": [
+        "提供一键清运入口，减少选择成本",
+        "完成后即时回访销项，强化体验闭环",
+        "适合作为志愿协助者和正向案例传播对象"
+      ],
+      "family": {
+        "agent": "丈夫可代办",
+        "status": "本次事件已闭环",
+        "note": "适合沉淀为治理案例，也适合成为志愿协助者。",
+        "actions": ["清运完成后回访", "沉淀为案例进入楼栋周报"]
+      },
+      "wallet": [
+        {
+          "id": "ledger-R03-001",
+          "title": "住户积分 +60",
+          "type": "已到账",
+          "note": "装修余料处理完成后到账",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 60,
+          "createdAt": "昨天"
+        },
+        {
+          "id": "ledger-R03-002",
+          "title": "住户积分 +60",
+          "type": "已到账",
+          "note": "上次配合完成清运闭环",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 60,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R03-003",
+          "title": "贡献积分 +30",
+          "type": "已到账",
+          "note": "参与过一次现场协助",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 30,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R03-004",
+          "title": "贡献积分 +25",
+          "type": "已到账",
+          "note": "陪同完成婴儿车回收交接",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 25,
+          "createdAt": "昨天"
+        },
+        {
+          "id": "ledger-R03-005",
+          "title": "清运优惠券",
+          "type": "已使用",
+          "note": "已核销 1 张",
+          "status": "used",
+          "account": "benefit",
+          "assetType": "coupon",
+          "createdAt": "昨天"
+        },
+        {
+          "id": "ledger-R03-006",
+          "title": "楼栋共治达人",
+          "type": "已解锁",
+          "note": "最近一次志愿协助让你成为本楼栋的共治榜样。",
+          "status": "unlocked",
+          "account": "achievement",
+          "assetType": "badge",
+          "createdAt": "昨天"
+        }
+      ],
+      "points": {
+        "resident": 120,
+        "volunteer": 55,
+        "badges": ["楼栋共治达人"]
+      },
+      "grantCodes": ["task:VT-002:volunteer-points"],
+      "rewardSummary": "已获得清运优惠券与积分奖励",
+      "history": ["昨天已完成装修余料清运并完成回访"],
+      "selectedOption": "cleanup",
+      "latestUnlock": {
+        "type": "badge",
+        "title": "楼栋共治达人",
+        "note": "最近一次志愿协助让你成为本楼栋的共治榜样。"
+      }
+    },
+    {
+      "id": "R-04",
+      "name": "周阿姨",
+      "room": "6号楼 1单元 402",
+      "identity": "适老场景",
+      "profile": "72 岁，独居住户，不熟悉智能手机操作。",
+      "tags": ["独居", "适老关注", "家属代办"],
+      "challenge": "不习惯线上办理，更依赖电话和家属确认。",
+      "recommendedStrategy": [
+        "优先走家属代办，再判断是否需要上门协助",
+        "减少打扰频次，尽量用电话和熟悉的人沟通",
+        "把流程讲得更简单，降低心理压力"
+      ],
+      "family": {
+        "agent": "外甥 刘博",
+        "status": "等待家属确认",
+        "note": "适老场景要把电话同步、代办确认和温和措辞放在前面。",
+        "actions": ["电话同步家属", "代选清理路径", "确认是否需要协助上门"]
+      },
+      "wallet": [
+        {
+          "id": "ledger-R04-001",
+          "title": "住户积分 +40",
+          "type": "已到账",
+          "note": "历史配合完成过一次公共空间整理",
+          "status": "credited",
+          "account": "resident",
+          "assetType": "points",
+          "amount": 40,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R04-002",
+          "title": "贡献积分 +40",
+          "type": "已到账",
+          "note": "陪同完成过一次楼道搬运协助",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 40,
+          "createdAt": "上月"
+        },
+        {
+          "id": "ledger-R04-003",
+          "title": "贡献积分 +30",
+          "type": "已到账",
+          "note": "参与过一次适老协助任务",
+          "status": "credited",
+          "account": "volunteer",
+          "assetType": "points",
+          "amount": 30,
+          "createdAt": "上周"
+        },
+        {
+          "id": "ledger-R04-004",
+          "title": "助老服务伙伴",
+          "type": "已解锁",
+          "note": "多次参与适老协助后解锁",
+          "status": "unlocked",
+          "account": "achievement",
+          "assetType": "badge",
+          "createdAt": "上周"
+        }
+      ],
+      "points": {
+        "resident": 40,
+        "volunteer": 70,
+        "badges": ["助老服务伙伴"]
+      },
+      "grantCodes": [],
+      "rewardSummary": "等待家属确认后，再锁定适老奖励",
+      "history": ["暂无历史事件，本次为首次治理提醒"],
+      "selectedOption": "",
+      "latestUnlock": null
+    }
+  ],
+  "volunteerTasks": [
+    {
+      "id": "VT-001",
+      "title": "帮助李阿姨确认处理路径",
+      "type": "轻任务",
+      "duration": "15 分钟",
+      "targetResidentId": "R-01",
+      "targetResidentName": "李阿姨",
+      "building": "3号楼 2单元",
+      "rewardPoints": 15,
+      "status": "open",
+      "assigneeResidentId": "",
+      "assigneeName": "",
+      "criteria": "帮助高龄住户或家属完成一次处理路径选择，并记录处理意愿。",
+      "note": "适合熟悉手机操作的邻里快速协助。",
+      "outcomeSummary": "已帮助老人顺利完成选择，减少首次处理阻力。"
+    },
+    {
+      "id": "VT-002",
+      "title": "陪同完成婴儿车回收交接",
+      "type": "协助任务",
+      "duration": "30 分钟",
+      "targetResidentId": "R-02",
+      "targetResidentName": "王先生",
+      "building": "7号楼 1单元",
+      "rewardPoints": 25,
+      "status": "claimed",
+      "assigneeResidentId": "R-03",
+      "assigneeName": "陈女士",
+      "criteria": "陪同服务商完成回收交接并上传前后对比记录。",
+      "note": "适合白天在家的热心邻里。",
+      "outcomeSummary": "协助履约更顺畅，减少了住户等待和物业往返沟通。"
+    },
+    {
+      "id": "VT-003",
+      "title": "周六楼栋共治日组织任务",
+      "type": "组织任务",
+      "duration": "60 分钟",
+      "targetResidentId": "",
+      "targetResidentName": "本楼栋公开任务",
+      "building": "6号楼 1单元",
+      "rewardPoints": 40,
+      "status": "draft",
+      "assigneeResidentId": "",
+      "assigneeName": "",
+      "criteria": "组织一次楼栋整理与成果上传，至少完成 3 户沟通。",
+      "note": "需要物业先发布，发布后住户端任务大厅可报名。",
+      "outcomeSummary": "形成一次楼栋级共治活动案例，并沉淀传播内容。"
+    }
+  ],
+  "pointsRules": {
+    "resident": [
+      "主动报备并选择处理路径：+15",
+      "预约回收或清运并完成：+20",
+      "配合使用周转位并按时清空：+15",
+      "参与楼栋共治活动：+30"
+    ],
+    "volunteer": [
+      "帮助老人完成一次代办：+15",
+      "参与一次现场协助：+25",
+      "完成一次搬运协助：+30",
+      "组织一次楼栋共治日：+40"
+    ]
+  },
+  "buildingResults": [
+    {
+      "id": "BR-001",
+      "title": "3号楼消防通道恢复通行",
+      "summary": "通过周转位与家属代办组合，把高阻力事件拆成了住户愿意接受的几步。",
+      "metric": "通行宽度恢复 100%",
+      "owner": "共治运营中心",
+      "updatedAt": "今天 17:20",
+      "tags": ["红色风险闭环", "助老场景", "周转位策略"]
+    },
+    {
+      "id": "BR-002",
+      "title": "7号楼形成邻里协助样板",
+      "summary": "回收交接由邻里志愿者陪同，物业角色从被动催办变成资源调度。",
+      "metric": "履约等待时长下降 40%",
+      "owner": "楼栋志愿者",
+      "updatedAt": "今天 16:40",
+      "tags": ["协助任务", "回收履约", "认知改变"]
+    },
+    {
+      "id": "BR-003",
+      "title": "6号楼共治日进入预热",
+      "summary": "运营中心已沉淀组织任务和传播文案，等待正式发布后招募报名。",
+      "metric": "预热志愿者 2 人",
+      "owner": "物业管家",
+      "updatedAt": "今天 15:10",
+      "tags": ["组织任务", "楼栋运营", "志愿池"]
+    }
+  ],
+  "cognitionCards": [
+    {
+      "title": "提醒文案从命令式改为协助式",
+      "body": "不再强调“立即清理”，而是先解释为什么会影响邻里通行与消防安全，再给住户可执行的路径。",
+      "metric": "提醒后首次响应率 72%",
+      "owner": "通知策略中心"
+    },
+    {
+      "title": "成果展示用 Before / After 代替训诫",
+      "body": "每次闭环都同步楼栋前后对比和感谢文案，把认知改变落在看得见的公共空间改善上。",
+      "metric": "楼栋正向反馈 18 条",
+      "owner": "共治运营中心"
+    },
+    {
+      "title": "双积分被定义为社区贡献账本",
+      "body": "住户积分强调主动配合，贡献积分强调帮助他人，让物业从清理执行转向运营组织。",
+      "metric": "志愿报名意愿提升 26%",
+      "owner": "激励中心"
+    }
+  ],
+  "storageSlots": [
+    {
+      "name": "A-01",
+      "area": "西侧周转区",
+      "status": "occupied",
+      "residentId": "R-02",
+      "residentLabel": "王先生",
+      "deadlineText": "等待回收上门"
+    },
+    {
+      "name": "A-02",
+      "area": "西侧周转区",
+      "status": "available",
+      "residentId": "",
+      "residentLabel": "空位",
+      "deadlineText": "可立即分配"
+    },
+    {
+      "name": "B-01",
+      "area": "东侧周转区",
+      "status": "available",
+      "residentId": "",
+      "residentLabel": "空位",
+      "deadlineText": "可立即分配"
+    },
+    {
+      "name": "B-02",
+      "area": "东侧周转区",
+      "status": "maintenance",
+      "residentId": "",
+      "residentLabel": "整理中",
+      "deadlineText": "今天 18:00 恢复"
+    }
+  ],
+  "rewards": [
+    {
+      "title": "适老实物奖励",
+      "note": "针对高龄住户优先发放食用油、鸡蛋等更有感知的奖励。",
+      "stat": "本周发放 26 份",
+      "impact": "高龄住户首次响应率提升 31%"
+    },
+    {
+      "title": "楼栋共治积分",
+      "note": "按楼栋累计贡献，可兑换便民服务日或公共空间升级权益。",
+      "stat": "7 栋参与中",
+      "impact": "高频投诉楼栋减少 2 栋"
+    },
+    {
+      "title": "清运与回收优惠券",
+      "note": "用于引导低价值大件杂物更快进入清运或回收路径。",
+      "stat": "核销率 68%",
+      "impact": "中青年住户预约转化更高"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "name": "resident-app-theme",
+    "product": "楼道互助治理 App / 业主端",
+    "version": "2026-05-05",
+    "sources": [
+      "12_业主端APP设计规范_视觉与交互系统.md",
+      "13_业主端APP组件拆解清单_基于优化稿.md",
+      "14_前端交接文档_业主端APP视觉重构开发说明.md",
+      "ChatGPT Image 2026年5月5日 22_43_32 (1).png",
+      "ChatGPT Image 2026年5月5日 22_43_33 (2).png"
+    ]
+  },
+  "color": {
+    "page": {
+      "base": "#FFF9F3",
+      "soft": "#FFE7C8",
+      "card": "#FFFFFF",
+      "elevated": "#FFF6ED",
+      "overlay": "rgba(90, 62, 43, 0.16)"
+    },
+    "brand": {
+      "primary": "#FF8A3D",
+      "primaryPress": "#F07B2E",
+      "secondary": "#6BA26B",
+      "secondaryPress": "#5D925D"
+    },
+    "text": {
+      "primary": "#5A3E2B",
+      "secondary": "#8E96A3",
+      "tertiary": "#B6AEA6",
+      "inverse": "#FFFFFF"
+    },
+    "state": {
+      "danger": "#E15D4D",
+      "warningBg": "#FFF1E4",
+      "warningText": "#D76A1D",
+      "successBg": "#EEF7EA",
+      "successText": "#5D925D",
+      "infoBg": "#FFF7EC",
+      "infoText": "#9B6A42"
+    },
+    "border": {
+      "soft": "rgba(212, 176, 138, 0.28)",
+      "card": "rgba(90, 62, 43, 0.08)",
+      "strong": "rgba(90, 62, 43, 0.16)"
+    },
+    "icon": {
+      "primary": "#FF8A3D",
+      "secondary": "#6BA26B",
+      "muted": "#8E96A3",
+      "inverse": "#FFFFFF"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "brand": "\"HarmonyOS Sans\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+      "body": "\"HarmonyOS Sans\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+    },
+    "fontSize": {
+      "caption": 12,
+      "body": 14,
+      "button": 16,
+      "title": 18,
+      "h2": 22,
+      "h1": 28
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "lineHeight": {
+      "caption": 1.5,
+      "body": 1.6,
+      "button": 1,
+      "title": 1.4,
+      "h2": 1.35,
+      "h1": 1.25
+    },
+    "textStyle": {
+      "h1": {
+        "fontFamily": "brand",
+        "fontSize": 28,
+        "fontWeight": 700,
+        "lineHeight": 1.25
+      },
+      "h2": {
+        "fontFamily": "brand",
+        "fontSize": 22,
+        "fontWeight": 600,
+        "lineHeight": 1.35
+      },
+      "title": {
+        "fontFamily": "brand",
+        "fontSize": 18,
+        "fontWeight": 500,
+        "lineHeight": 1.4
+      },
+      "body": {
+        "fontFamily": "body",
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 1.6
+      },
+      "caption": {
+        "fontFamily": "body",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "lineHeight": 1.5
+      },
+      "button": {
+        "fontFamily": "brand",
+        "fontSize": 16,
+        "fontWeight": 500,
+        "lineHeight": 1
+      }
+    }
+  },
+  "radius": {
+    "cardXl": 20,
+    "cardLg": 16,
+    "cardMd": 12,
+    "button": 12,
+    "pill": 999
+  },
+  "space": {
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 20,
+    "xxl": 24
+  },
+  "shadow": {
+    "ambient": "0 8px 24px rgba(90, 62, 43, 0.08)",
+    "contact": "0 2px 8px rgba(90, 62, 43, 0.06)",
+    "hero": "0 12px 32px rgba(90, 62, 43, 0.10)",
+    "highlightTop": "inset 0 1px 0 rgba(255, 255, 255, 0.78)"
+  },
+  "motion": {
+    "durationFast": "160ms",
+    "durationBase": "200ms",
+    "durationSlow": "240ms",
+    "easingOut": "ease-out"
+  },
+  "layout": {
+    "safeAreaTop": "env(safe-area-inset-top)",
+    "safeAreaBottom": "env(safe-area-inset-bottom)",
+    "pageGutter": 16,
+    "sectionGap": 24,
+    "cardGap": 16,
+    "componentGapMin": 12,
+    "componentGapMax": 20,
+    "appMaxWidth": 460
+  },
+  "component": {
+    "button": {
+      "height": 44,
+      "paddingInline": {
+        "min": 16,
+        "max": 20
+      },
+      "primary": {
+        "bg": "{color.brand.primary}",
+        "bgPress": "{color.brand.primaryPress}",
+        "text": "{color.text.inverse}",
+        "radius": "{radius.button}",
+        "shadow": "{shadow.contact}"
+      },
+      "secondary": {
+        "bg": "{color.brand.secondary}",
+        "bgPress": "{color.brand.secondaryPress}",
+        "text": "{color.text.inverse}",
+        "radius": "{radius.button}",
+        "shadow": "{shadow.contact}"
+      },
+      "outline": {
+        "bg": "{color.page.card}",
+        "text": "{color.brand.primary}",
+        "border": "{color.brand.primary}",
+        "radius": "{radius.button}"
+      },
+      "text": {
+        "bg": "transparent",
+        "text": "{color.text.primary}"
+      }
+    },
+    "chip": {
+      "height": 32,
+      "paddingInline": 12,
+      "radius": "{radius.pill}",
+      "default": {
+        "bg": "{color.page.card}",
+        "border": "{color.border.soft}",
+        "text": "{color.text.primary}"
+      },
+      "active": {
+        "bg": "{color.page.soft}",
+        "text": "{color.brand.primary}"
+      },
+      "success": {
+        "bg": "{color.state.successBg}",
+        "text": "{color.brand.secondary}"
+      }
+    },
+    "card": {
+      "hero": {
+        "radius": "{radius.cardXl}",
+        "padding": 20,
+        "bg": "{color.page.card}",
+        "softBg": "{color.page.soft}",
+        "shadow": "{shadow.hero}"
+      },
+      "surface": {
+        "radius": "{radius.cardLg}",
+        "padding": 16,
+        "bg": "{color.page.card}",
+        "border": "{color.border.card}",
+        "shadow": "{shadow.ambient}"
+      },
+      "option": {
+        "radius": "{radius.cardLg}",
+        "padding": 16,
+        "minHeight": 148
+      },
+      "asset": {
+        "radius": "{radius.cardXl}",
+        "padding": 20,
+        "shadow": "{shadow.hero}"
+      },
+      "list": {
+        "radius": "{radius.cardLg}",
+        "padding": 16
+      }
+    },
+    "tabBar": {
+      "height": 76,
+      "radius": 20,
+      "padding": 10,
+      "bg": "rgba(255, 255, 255, 0.92)",
+      "border": "rgba(255, 255, 255, 0.72)",
+      "shadow": "0 20px 42px rgba(90, 62, 43, 0.14)"
+    },
+    "fab": {
+      "height": 52,
+      "radius": 18,
+      "bg": "linear-gradient(90deg, #FF8A3D 0%, #F07B2E 100%)",
+      "text": "{color.text.inverse}",
+      "shadow": "0 18px 40px rgba(90, 62, 43, 0.22)"
+    },
+    "drawer": {
+      "radiusTop": 26,
+      "padding": 16,
+      "overlay": "rgba(90, 62, 43, 0.38)",
+      "bg": "{color.page.card}",
+      "shadow": "0 -10px 40px rgba(90, 62, 43, 0.16)"
+    },
+    "toast": {
+      "radius": 16,
+      "paddingBlock": 12,
+      "paddingInline": 16,
+      "bg": "rgba(90, 62, 43, 0.94)",
+      "text": "{color.text.inverse}"
+    }
+  }
+}

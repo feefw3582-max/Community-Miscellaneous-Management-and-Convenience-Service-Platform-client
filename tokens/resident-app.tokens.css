@@ -1,0 +1,154 @@
+:root {
+  --color-bg-page: #FFF9F3;
+  --color-bg-soft: #FFE7C8;
+  --color-bg-card: #FFFFFF;
+  --color-bg-elevated: #FFF6ED;
+  --color-bg-overlay-soft: rgba(90, 62, 43, 0.16);
+
+  --color-brand-primary: #FF8A3D;
+  --color-brand-primary-press: #F07B2E;
+  --color-brand-secondary: #6BA26B;
+  --color-brand-secondary-press: #5D925D;
+
+  --color-text-primary: #5A3E2B;
+  --color-text-secondary: #8E96A3;
+  --color-text-tertiary: #B6AEA6;
+  --color-text-inverse: #FFFFFF;
+
+  --color-state-danger: #E15D4D;
+  --color-state-warning-bg: #FFF1E4;
+  --color-state-warning-text: #D76A1D;
+  --color-state-success-bg: #EEF7EA;
+  --color-state-success-text: #5D925D;
+  --color-state-info-bg: #FFF7EC;
+  --color-state-info-text: #9B6A42;
+
+  --color-border-soft: rgba(212, 176, 138, 0.28);
+  --color-border-card: rgba(90, 62, 43, 0.08);
+  --color-border-strong: rgba(90, 62, 43, 0.16);
+
+  --font-family-brand: "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-family-body: "HarmonyOS Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+
+  --font-size-caption: 12px;
+  --font-size-body: 14px;
+  --font-size-button: 16px;
+  --font-size-title: 18px;
+  --font-size-h2: 22px;
+  --font-size-h1: 28px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-caption: 1.5;
+  --line-height-body: 1.6;
+  --line-height-button: 1;
+  --line-height-title: 1.4;
+  --line-height-h2: 1.35;
+  --line-height-h1: 1.25;
+
+  --font-h1: var(--font-weight-bold) var(--font-size-h1) / var(--line-height-h1) var(--font-family-brand);
+  --font-h2: var(--font-weight-semibold) var(--font-size-h2) / var(--line-height-h2) var(--font-family-brand);
+  --font-title: var(--font-weight-medium) var(--font-size-title) / var(--line-height-title) var(--font-family-brand);
+  --font-body: var(--font-weight-regular) var(--font-size-body) / var(--line-height-body) var(--font-family-body);
+  --font-caption: var(--font-weight-regular) var(--font-size-caption) / var(--line-height-caption) var(--font-family-body);
+  --font-button: var(--font-weight-medium) var(--font-size-button) / var(--line-height-button) var(--font-family-brand);
+
+  --radius-card-xl: 20px;
+  --radius-card-lg: 16px;
+  --radius-card-md: 12px;
+  --radius-button: 12px;
+  --radius-pill: 999px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+
+  --shadow-ambient: 0 8px 24px rgba(90, 62, 43, 0.08);
+  --shadow-contact: 0 2px 8px rgba(90, 62, 43, 0.06);
+  --shadow-hero: 0 12px 32px rgba(90, 62, 43, 0.10);
+  --highlight-top: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+
+  --motion-duration-fast: 160ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-slow: 240ms;
+  --motion-ease-out: ease-out;
+
+  --layout-safe-top: env(safe-area-inset-top);
+  --layout-safe-bottom: env(safe-area-inset-bottom);
+  --layout-page-gutter: 16px;
+  --layout-section-gap: 24px;
+  --layout-card-gap: 16px;
+  --layout-component-gap-min: 12px;
+  --layout-component-gap-max: 20px;
+  --layout-app-max-width: 460px;
+
+  --button-height: 44px;
+  --button-padding-inline-min: 16px;
+  --button-padding-inline-max: 20px;
+  --button-primary-bg: var(--color-brand-primary);
+  --button-primary-bg-press: var(--color-brand-primary-press);
+  --button-primary-text: var(--color-text-inverse);
+  --button-secondary-bg: var(--color-brand-secondary);
+  --button-secondary-bg-press: var(--color-brand-secondary-press);
+  --button-secondary-text: var(--color-text-inverse);
+  --button-outline-bg: var(--color-bg-card);
+  --button-outline-border: var(--color-brand-primary);
+  --button-outline-text: var(--color-brand-primary);
+
+  --chip-height: 32px;
+  --chip-padding-inline: 12px;
+  --chip-bg: var(--color-bg-card);
+  --chip-border: var(--color-border-soft);
+  --chip-text: var(--color-text-primary);
+  --chip-active-bg: var(--color-bg-soft);
+  --chip-active-text: var(--color-brand-primary);
+  --chip-success-bg: var(--color-state-success-bg);
+  --chip-success-text: var(--color-brand-secondary);
+
+  --card-hero-radius: var(--radius-card-xl);
+  --card-hero-padding: 20px;
+  --card-hero-bg: var(--color-bg-card);
+  --card-hero-bg-soft: var(--color-bg-soft);
+  --card-hero-shadow: var(--shadow-hero);
+  --card-surface-radius: var(--radius-card-lg);
+  --card-surface-padding: 16px;
+  --card-surface-bg: var(--color-bg-card);
+  --card-surface-border: var(--color-border-card);
+  --card-surface-shadow: var(--shadow-ambient);
+  --card-option-min-height: 148px;
+
+  --asset-card-radius: var(--radius-card-xl);
+  --asset-card-padding: 20px;
+  --asset-card-shadow: var(--shadow-hero);
+
+  --tab-bar-height: 76px;
+  --tab-bar-radius: 20px;
+  --tab-bar-padding: 10px;
+  --tab-bar-bg: rgba(255, 255, 255, 0.92);
+  --tab-bar-border: rgba(255, 255, 255, 0.72);
+  --tab-bar-shadow: 0 20px 42px rgba(90, 62, 43, 0.14);
+
+  --fab-height: 52px;
+  --fab-radius: 18px;
+  --fab-bg: linear-gradient(90deg, #FF8A3D 0%, #F07B2E 100%);
+  --fab-text: var(--color-text-inverse);
+  --fab-shadow: 0 18px 40px rgba(90, 62, 43, 0.22);
+
+  --drawer-radius-top: 26px;
+  --drawer-padding: 16px;
+  --drawer-overlay: rgba(90, 62, 43, 0.38);
+  --drawer-bg: var(--color-bg-card);
+  --drawer-shadow: 0 -10px 40px rgba(90, 62, 43, 0.16);
+
+  --toast-radius: 16px;
+  --toast-padding-block: 12px;
+  --toast-padding-inline: 16px;
+  --toast-bg: rgba(90, 62, 43, 0.94);
+  --toast-text: var(--color-text-inverse);
+}
