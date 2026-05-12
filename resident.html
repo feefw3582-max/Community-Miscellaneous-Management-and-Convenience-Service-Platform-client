@@ -20,8 +20,8 @@
         <div class="resident-topbar">
           <div class="resident-app-title">
             <p class="eyebrow">畅楼生活</p>
-            <h1>先把这件事处理好</h1>
-            <p class="resident-title-note" id="resident-title-note">先看推荐方案，再按最省心的方式继续。</p>
+            <h1>我可以做什么</h1>
+            <p class="resident-title-note" id="resident-title-note">常用服务、相关提醒和奖励动态都在这里。</p>
           </div>
           <div class="resident-topbar-actions">
             <a class="secondary-link" href="./index.html">中台</a>
@@ -37,10 +37,10 @@
         <section class="resident-page is-active" data-tab-panel="home">
           <div class="resident-home-flow" id="resident-home-flow">
             <section class="status-card status-card-app status-card-home resident-home-node" id="status-card"></section>
-            <section class="resident-home-node resident-home-node-reason task-focus-card reason-explain-card" id="resident-current-event"></section>
-            <section class="resident-home-node resident-home-node-recommended" id="resident-recommended-option"></section>
+            <section class="resident-home-node resident-home-node-services" id="resident-current-event"></section>
+            <section class="resident-home-node resident-home-node-digest" id="resident-recommended-option"></section>
             <section class="resident-home-node resident-home-options-grid" id="resident-options"></section>
-            <section class="resident-home-node resident-home-node-decision" id="resident-home-decisions"></section>
+            <section class="resident-home-node resident-home-node-service-banner" id="resident-home-decisions"></section>
             <div class="resident-home-tail" id="home-progress-section">
               <section class="resident-home-tail-card" id="resident-progress"></section>
               <section class="resident-home-tail-card" id="resident-home-reward"></section>
@@ -55,7 +55,7 @@
             <div class="resident-section-heading compact">
               <div>
                 <p class="kicker">任务大厅</p>
-                <h2>低门槛、短时长、做完会被看见</h2>
+                <h2>低门槛、短时长、做完就会被看见</h2>
               </div>
             </div>
             <div class="segmented-control" id="resident-volunteer-filters"></div>
@@ -85,6 +85,8 @@
             </div>
             <div class="segmented-control" id="resident-message-filters"></div>
           </section>
+
+          <section class="resident-section resident-message-detail" id="resident-message-detail" hidden></section>
 
           <section class="resident-section">
             <div class="message-list message-list-app" id="resident-messages"></div>
