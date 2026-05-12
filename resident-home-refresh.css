@@ -1,0 +1,147 @@
+.home-service-grid-card,
+.home-digest-card,
+.home-side-summary-card,
+.message-detail-shell,
+.message-detail-summary-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(212, 176, 138, 0.22);
+  background: linear-gradient(180deg, #fffdf9 0%, #fff8ef 100%);
+  box-shadow: 0 12px 28px rgba(90, 62, 43, 0.06);
+}
+
+.home-inline-heading h3,
+.home-quick-option-head h3,
+.message-detail-summary-card strong {
+  margin: 0;
+}
+
+.home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-service-shortcut {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-height: 132px;
+  padding: 16px;
+  border: 1px solid rgba(212, 176, 138, 0.18);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #5a3e2b;
+  text-align: left;
+  box-shadow: 0 10px 24px rgba(90, 62, 43, 0.04);
+}
+
+.home-service-shortcut strong,
+.home-digest-meta strong,
+.home-quick-option-card strong {
+  line-height: 1.45;
+}
+
+.home-service-shortcut span:last-child,
+.home-digest-meta span,
+.home-quick-option-card .helper-text,
+.message-detail-summary-card p {
+  margin: 0;
+  color: #8a6a53;
+  line-height: 1.6;
+}
+
+.home-service-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff3e5 0%, #ffe0bb 100%);
+  color: #d76a1d;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: inset 0 0 0 1px rgba(255, 138, 61, 0.14);
+}
+
+.home-digest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.home-digest-meta {
+  display: grid;
+  gap: 8px;
+  min-height: 92px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(212, 176, 138, 0.16);
+}
+
+.home-quick-option-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(212, 176, 138, 0.18);
+  background: #fffdf9;
+  box-shadow: 0 10px 24px rgba(90, 62, 43, 0.05);
+}
+
+.home-quick-option-card.is-selected {
+  border-color: rgba(255, 138, 61, 0.28);
+  box-shadow: 0 16px 28px rgba(255, 138, 61, 0.08);
+}
+
+.home-quick-option-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-launch-card .decision-result-card,
+.service-launch-result {
+  max-width: none;
+}
+
+.resident-message-detail {
+  display: grid;
+  gap: 12px;
+}
+
+.message-detail-shell {
+  gap: 16px;
+}
+
+.message-detail-summary-card .row-between {
+  align-items: flex-start;
+}
+
+.message-detail-block .action-card {
+  margin: 0;
+}
+
+.resident-message-option-grid {
+  grid-template-columns: 1fr;
+}
+
+.message-detail-progress-card,
+.message-detail-reward-card {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .home-service-grid,
+  .home-digest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-service-shortcut {
+    min-height: 0;
+  }
+}
